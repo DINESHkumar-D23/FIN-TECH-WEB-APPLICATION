@@ -1,0 +1,328 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f6fb;
+  color: #1f1f1f;
+}
+
+/* === Layout === */
+.Transfers {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.tr-main {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #C4D9FF, #C5BAFF, #E8F9FF, #FBFBFB);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  color: #003d29;
+}
+.sidebar nav ul {
+  list-style: none;
+}
+.sidebar nav li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s;
+}
+.sidebar nav li.active,
+.sidebar nav li:hover {
+  color: #003d29;
+}
+.sidebar .contact {
+  margin-top: auto;
+  padding: 10px;
+  background: #a5b4fc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* === Cards Section === */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  gap: 16px;
+  justify-content: center;
+  margin-left: 240px;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  padding: 16px;
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card.selected {
+  outline: 3px solid #fff;
+}
+/* Gradients */
+.card1 {
+  background: linear-gradient(135deg, #4e43a8, #b2334c);
+}
+.card2 {
+  background: linear-gradient(135deg, #34d9aa, #2b7ad9);
+}
+.card-amex {
+  background: linear-gradient(135deg, #004d99, #66b2ff);
+}
+.card-master {
+  background: linear-gradient(135deg, #ff4e00, #f9d423);
+}
+.card-discover {
+  background: linear-gradient(135deg, #ff8800, #444);
+}
+/* Info & Delete */
+.card .info,
+.card .delete {
+  position: absolute;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.card .info {
+  right: 48px;
+}
+.card .delete {
+  right: 12px;
+}
+.card .info:hover,
+.card .delete:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+/* Text */
+.card .type {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.card .number {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.card .user,
+.card .bank {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+/* Add-Card Tile */
+.card.add {
+  margin-bottom: 100px;
+  margin-right: 530px;
+  background: #fff;
+  color: #888;
+  border: 2px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card.add:hover {
+  background: #fafafa;
+}
+
+/* === Transfer Form === */
+.form {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: #e8ebf9;
+  border-radius: 12px;
+  max-width: 2000px;
+}
+.form h3 {
+  font-size: 1.3rem;
+  color: #333;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form input,
+.form select,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+.form button {
+  padding: 12px;
+  background: #9cacfa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.form button:disabled {
+  background: #d0d5f8;
+  cursor: not-allowed;
+}
+.form button:hover:not(:disabled) {
+  background: #818cf8;
+}
+.form small {
+  color: #e74c3c;
+  font-size: 0.8rem;
+}
+
+/* === Recent Transactions === */
+.recent {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px; 
+  padding-top: 0px;
+  margin-left: 240px;
+}
+.recent h4 {
+  color: #333;
+  margin-bottom: 8px;
+}
+.recent .none {
+  color: #777;
+}
+.recent ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.recent li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.recent-table th,
+.recent-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #333;
+}
+.recent-table th {
+  background: #f0f4f8;
+  font-weight: 600;
+}
+.recent-table tr:hover td {
+  background: #fafafa;
+}
+
+/* === Modals === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal.detail {
+  width: 280px;
+}
+.modal h4 {
+  color: #333;
+  margin-bottom: 8px;
+}
+.modal input {
+  width: 100%;
+}
+.modal button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.modal button.cancel {
+  background: #e74c3c;
+  color: #fff;
+}

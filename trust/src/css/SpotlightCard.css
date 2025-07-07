@@ -1,0 +1,69 @@
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #c3f5d2 0%,
+    #a8dfff 25%,
+    #d0b3f9 50%,
+    #f2c0e9 75%,
+    #c3f5d2 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientCycle 15s ease infinite;
+  transition: transform 0.3s ease;
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
+  --spotlight-color: rgba(254, 210, 226, 0.5);
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: radial-gradient(
+    circle 150px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    var(--spotlight-color, rgba(255, 255, 255, 0.3)),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-visible::before {
+  opacity: 1;
+}
+
+.card-spotlight > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background animation */
+@keyframes gradientCycle {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
