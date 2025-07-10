@@ -24,7 +24,7 @@ FIN-TECH-WEB-APPLICATION/
 ├── trust/
 │   ├── BACKEND/
 │   │   ├── controllers/
-│   │   ├── middlesware/
+│   │   ├── middleware/
 │   │   ├── models/
 │   │   ├── routes/
 │   │   ├── db.js
@@ -83,7 +83,15 @@ FIN-TECH-WEB-APPLICATION/
 
 ## API Endpoints
 
+
+https://github.com/user-attachments/assets/7aff4d34-a851-4de9-9acb-2b3d9eabea37
+
+
 - `POST /api/register` - Register a new user
+
+https://github.com/user-attachments/assets/54b24dba-2583-4f34-83bc-57ce94810c7e
+
+
 - `POST /api/login` - User login
 - `GET /api/profile` - Get user profile
 - `POST /api/transactions` - Create a transaction
@@ -92,6 +100,8 @@ FIN-TECH-WEB-APPLICATION/
 (See `trust/BACKEND/routes/` for more details.)
 
 ## Contributing
+
+
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
