@@ -22,9 +22,6 @@ Database: MongoDB (Mongoose)
 Others: Axios, React Router, CORS
 
 📁 Project Structure
-pgsql
-Copy
-Edit
 FIN-TECH-WEB-APPLICATION/
 ├── trust/
 │   ├── BACKEND/
@@ -46,6 +43,7 @@ FIN-TECH-WEB-APPLICATION/
 │   ├── package.json
 │   └── README.md
 └── package.json
+
 🧰 Getting Started
 Prerequisites
 Node.js (v14 or above)
