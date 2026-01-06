@@ -6,9 +6,9 @@ A modern FinTech web application designed to provide secure digital banking serv
 
 ## Application Preview
 
-![Dashboard](https://github.com/user-attachments/assets/0d288cff-044b4967-9b15-2c4f1351a90b)
+https://github.com/user-attachments/assets/52c211c2-d80b-4a71-b7fe-8edd1bafba20
 
-![Transactions](https://github.com/user-attachments/assets/f7abc437-5d19-4d6b-a3b4-e2694619a550)
+https://github.com/user-attachments/assets/9ad0303f-9ef0-4dc4-a6f2-4fed21988b11
 
 ---
 
